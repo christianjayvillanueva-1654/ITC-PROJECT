@@ -1,0 +1,8 @@
+body {
+  background-color: oklch(97.356% 0.01586 58.432);
+  width: 100%;
+  height: 200vh;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} 
