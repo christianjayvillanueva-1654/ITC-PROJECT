@@ -1,5 +1,6 @@
 body {
-  background-color: oklch(74.437% 0.17268 51.429);
+  font-family: var(--ui-font);
+  background-color: oklch(87.676% 0.05695 58.251);
   width: 100%;
   height: 200vh;
   margin: 0;
@@ -7,6 +8,13 @@ body {
   box-sizing: border-box;
 }
 
+:root {
+  --ui-font: 'Inter', system-ui, sans-serif;
+  --heading-font: 'Merriweather', serif;
+}
+h1, h2, h3, h4 {
+  font-family: var(--heading-font);
+}
 .about-wrapper {
   display: flex;
   flex-direction: column; /* stack children vertically */
@@ -28,7 +36,7 @@ body {
   top: 75px;               /* 200px below the top of about-page1 */
   left: 50%;                /* start from horizontal center */
   transform: translateX(-50%); /* shift back by half width to center */
-  width: 500px;             /* fixed width */
+  width: auto;             /* let content size itself */
   background: #fff;         /* visible background */
   border-radius: 2rem;       /* optional rounded corners */
   box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* subtle shadow */
@@ -38,19 +46,20 @@ body {
 
 .navbar2 ul {
   display: flex;
-  justify-content: space-around;
+  gap: 0.25rem; /* tighten spacing between items */
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
 .navbar2 li {
-  font-size: 1.2rem;
+  font-size: 1.05rem;
   font-weight: 600;
   cursor: pointer;
-  padding: 0.8rem 1.5rem;
+  padding: 0.6rem 1rem;
   border-radius: 20px;          /* roundy background when active */
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  position: relative; /* allow panel to position under this li */
 }
 
 /* Hover → pale effect */
@@ -65,6 +74,115 @@ body {
   border-radius: 2rem;          /* rounded pill shape */
 
 
+}
+
+/* More Tales dropdown panel */
+
+.more-tales-section {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1rem;
+  margin: 1rem auto 0 auto;
+  width: 92%;
+  max-width: 1100px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+}
+
+.more-tales-section .panel-top {
+  display: flex;
+  justify-content: flex-start; /* put search at upper-left */
+  margin-bottom: 0.75rem;
+}
+
+.more-tales-section .panel-search {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.more-tales-section .panel-search input[type="search"] {
+  padding: 0.4rem 0.6rem;
+  border-radius: 6px;
+  border: 1px solid rgba(0,0,0,0.12);
+}
+
+.more-tales-section .panel-search button {
+  padding: 0.4rem 0.6rem;
+  border-radius: 6px;
+  border: none;
+  background: #0077cc;
+  color: #fff;
+}
+
+.more-tales-section .genres {
+  display: flex;
+  flex-direction: column; /* stack genres vertically */
+  gap: 1.5rem;
+}
+
+.more-tales-section .genre {
+  width: 100%;
+}
+
+.more-tales-section h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.05rem;
+}
+
+.book-row {
+  display: flex;
+  gap: 0.75rem;
+  overflow-x: auto;
+  padding-bottom: 0.25rem;
+}
+
+.book-cover {
+  flex: 0 0 auto;
+  width: 130px;
+  height: 190px;
+  border-radius: 6px;
+  overflow: hidden;
+  background: #f3f3f3;
+}
+
+.book-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Optional: hide scrollbar for better look (still scrollable) */
+.book-row::-webkit-scrollbar { height: 8px; }
+.book-row::-webkit-scrollbar-thumb { background: rgba(0,0,0,0.12); border-radius: 4px; }
+
+.more-tales-panel h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 0.95rem;
+}
+
+.book-row {
+  display: flex;
+  gap: 0.5rem;
+  overflow-x: auto;
+  padding-bottom: 0.25rem;
+}
+
+.book-card {
+  flex: 0 0 auto;
+  min-width: 120px;
+  padding: 0.6rem;
+  border-radius: 8px;
+  background: #f7f7f7;
+  text-align: center;
+  font-size: 0.85rem;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+  cursor: pointer;
+}
+
+.book-card:hover {
+  transform: translateY(-4px);
+  transition: transform 0.15s ease;
 }
 
 
