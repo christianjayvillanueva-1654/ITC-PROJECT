@@ -1,10 +1,13 @@
 body {
-  background-color: oklch(74.437% 0.17268 51.429);
+  background-color: rgb(255, 135, 49);
   width: 100%;
-  height: 200vh;
+  height: 100%;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  overflow: hidden; /* disables both vertical and horizontal scroll */
+  height: 100%;     /* ensures content fits viewport */
+
 }
 
 .about-wrapper {
@@ -24,6 +27,8 @@ body {
 }
 
 .navbar2 {
+   position: sticky;
+  top: 75px;
   position: absolute;       /* position relative to about-page1 */
   top: 75px;               /* 200px below the top of about-page1 */
   left: 50%;                /* start from horizontal center */
@@ -82,7 +87,7 @@ body {
   left: 0;
   width: 100%;
   height: 40vh;        /* cover bottom 500px */
-  background-color:  oklch(97.356% 0.01586 58.432);
+  background-color:  #ff8731;
   z-index: 1;           /* behind carousel */
 }
 
