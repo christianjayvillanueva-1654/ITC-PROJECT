@@ -1,3 +1,6 @@
+/* ===========================
+   Global Styles
+=========================== */
 body {
   background-color: rgb(255, 135, 49);
   width: 100%;
@@ -6,8 +9,6 @@ body {
   padding: 0;
   box-sizing: border-box;
   overflow: hidden; /* disables both vertical and horizontal scroll */
-  height: 100%;     /* ensures content fits viewport */
-
 }
 
 .about-wrapper {
@@ -15,8 +16,6 @@ body {
   flex-direction: column; /* stack children vertically */
   width: 100%;
 }
-
-
 
 .about-page1 {
   position: relative;   /* allow absolute positioning inside */
@@ -26,17 +25,20 @@ body {
   justify-content: center;
 }
 
+/* ===========================
+   Secondary Navbar
+=========================== */
 .navbar2 {
-  position: sticky;
+  position: absolute;   /* relative to about-page1 */
   top: 75px;
-  position: absolute;       /* position relative to about-page1 */
-  top: 75px;               /* 200px below the top of about-page1 */
-  width: 500px;             /* fixed width */
-  background: #fff;         /* visible background */
-  border-radius: 2rem;       /* optional rounded corners */
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* subtle shadow */
-  z-index: 3;               /* above carousel/ground */
-  padding: 0.5rem 1rem;       /* vertical padding */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 500px;
+  background: #fff;
+  border-radius: 2rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  z-index: 3;
+  padding: 0.5rem 1rem;
 }
 
 .navbar2 ul {
@@ -47,7 +49,7 @@ body {
   margin: 0;
   padding: 0;
   list-style: none;
-  height: 100%;              /* ensures flexbox has vertical space */
+  height: 100%;
 }
 
 .navbar2 li {
@@ -55,23 +57,16 @@ body {
   font-weight: 600;
   cursor: pointer;
   padding: 0.8rem 1.5rem;
-  border-radius: 20px;          /* roundy background when active */
+  border-radius: 20px;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Hover → pale effect */
+/* Hover effect */
 .navbar2 li:hover {
-  background-color: rgba(0,0,0,0.05); /* pale gray */
+  background-color: rgba(0,0,0,0.05);
 }
 
-/* Active (clicked/selected) state */
-.navbar2 li.active {
-  background-color: #ffdd57;    /* highlight background */
-  color: #000;                  /* text color contrast */
-  border-radius: 2rem;          /* rounded pill shape */
-
-
-}
+/* Active state */
 .navbar2 li.active {
   background-color: #ffdd57;
   color: #000;
@@ -79,51 +74,46 @@ body {
   transition: all 0.3s ease; /* smooth highlight change */
 }
 
-
-
-
-
-.carousel-container {
-  position: relative;
-  z-index: 2;           /* bring carousel above ground */
-}
-
+/* ===========================
+   Ground Section
+=========================== */
 .ground {
   position: absolute;
-  bottom: 0;            /* stick to bottom of about-page1 */
+  bottom: 0;
   left: 0;
   width: 100%;
-  height: 40vh;        /* cover bottom 500px */
-  background-color:  #ff8731;
-  z-index: 1;           /* behind carousel */
+  height: 40vh;
+  background-color: #ff8731;
+  z-index: 1; /* behind carousel */
 }
 
-
+/* ===========================
+   Carousel
+=========================== */
 .carousel-container {
-  position: relative;         
-  width: 80vw;              /* fixed width for carousel */
-  margin: 0 auto;             /* center horizontally */
+  position: relative;
+  width: 80vw;
+  margin: 0 auto;
   overflow: hidden;
-  padding-top: 6rem;          /* adjust spacing */
-  padding-bottom: 2rem;
+  padding: 6rem 0 2rem;
   display: flex;
-  justify-content: center;    /* center track */
-  
+  justify-content: center;
+  z-index: 2; /* above ground */
 }
 
 .carousel {
   display: flex;
   gap: 3rem;
+  justify-content: center;
   will-change: transform;
   transition: transform 0.3s ease-in-out;
-  justify-content: center;
 }
 
-/* Cards with fixed 8.5/11 ratio */
+/* Card styles */
 .card {
   flex: 0 0 auto;
-  width: 250px;               /* fixed width */
-  aspect-ratio: 8.5 / 11;     /* enforce paper ratio */
+  width: 250px;
+  aspect-ratio: 8.5 / 11; /* enforce paper ratio */
   background: #fff;
   border-radius: 10px;
   text-align: center;
@@ -135,29 +125,29 @@ body {
   transition: transform 0.25s ease, background-color 0.2s ease, opacity 0.25s ease;
 }
 
-/* Middle card emphasis */
+/* Active card emphasis */
 .card.active {
   transform: scale(1.15);
   background-color: #ffdd57;
   z-index: 1;
 }
 
-/* Fade + scale helpers */
+/* Fade helpers */
 .card.fade-out {
   opacity: 0;
-  transform: scale(0.85); /* shrink while fading out */
+  transform: scale(0.85);
 }
 
 .card.fade-in {
   opacity: 0;
-  transform: scale(0.85); /* start smaller */
-  animation: fadeInScale 0.3s forwards; /* fade + zoom in */
+  transform: scale(0.85);
+  animation: fadeInScale 0.3s forwards;
 }
 
+/* Animation */
 @keyframes fadeInScale {
   to {
     opacity: 1;
-    transform: scale(1); /* grow back to normal */
+    transform: scale(1);
   }
 }
-
