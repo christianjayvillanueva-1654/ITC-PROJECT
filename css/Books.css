@@ -154,36 +154,3 @@ body {
   }
 }
 
-.about-page2 {
-  position: relative;
-  height: 100vh;
-  display: flex;
-  align-items: flex-start;   /* top alignment */
-  justify-content: flex-start; /* left alignment */
-}
-
-
-.content-page2 {
-  background-color: oklch(97.356% 0.01586 58.432);
-  width: 800px;
-  height: 100vh;              /* full viewport height */
-  z-index: 2;                 
-  padding: 2rem;
-  color: #fff;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;    /* vertical centering */
-  align-items: flex-start;        /* horizontal centering */
-  padding-top: 0;
-}
-
-@media screen and (max-width: 800px) {
-  .content-page2 {
-    width: 100%;        /* take most of the screen width */
-    height: auto;      /* let content define height */
-    margin: 0 auto;    /* center horizontally */
-    border-radius: 12px; /* optional: make it look like a card */
-  }
-}
-
-

@@ -1,0 +1,70 @@
+.about-page2 {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: flex-start;   /* top alignment */
+  justify-content: flex-start; /* left alignment */
+   overflow: hidden; /* disables both vertical and horizontal scroll */
+  height: 100%;     /* ensures content fits viewport */
+}
+
+
+.content-page2 {
+  background-color: oklch(70.09% 0.20117 44.755);
+  width: 800px;
+  height: 100vh;              /* full viewport height */
+  z-index: 2;                 
+  padding: 2rem;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;    /* vertical centering */
+  align-items: flex-start;        /* horizontal centering */
+  padding-top: 0;
+}
+
+
+@media screen and (max-width: 800px) {
+  .content-page2 {
+    width: 100%;        /* take most of the screen width */
+    height: 100%;      /* let content define height */
+    margin: 0 auto;    /* center horizontally */
+    border-radius: 12px; /* optional: make it look like a card */
+  }
+}
+
+
+
+.navbar3 {
+  background: #fff;
+  border-radius: 2rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  padding: 0.5rem 1rem;
+  width: 500px;
+}
+
+.navbar3 ul {
+  display: flex;
+  justify-content: space-around;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.navbar3 li {
+  font-size: 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0.8rem 1.5rem;
+  border-radius: 20px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar3 li:hover {
+  background-color: rgba(0,0,0,0.05);
+}
+
+.navbar3 li.active {
+  background-color: #ffdd57;
+  color: #000;
+}

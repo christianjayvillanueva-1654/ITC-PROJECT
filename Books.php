@@ -6,6 +6,7 @@
   <title>Document</title>
   <link rel="stylesheet" href="css/Books.css">
   <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/BooksPage2.css">
 </head>
 
 
@@ -39,15 +40,6 @@
       <div class="ground"></div>
 
     </div>
-
-    <div class="about-page2">
-    
-      <div class="content-page2">
-
-      </div>
-      <div class="back-img-page2"></div>
-    </div>
-  </div>
     <script src="js/navbar2.js"></script>
 </body>
 
