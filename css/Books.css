@@ -13,11 +13,15 @@ body {
 
 
 .about-page1 {
-  position: relative;   /* allow absolute positioning inside */
+  position: relative;
   height: 100vh;
-  display: flex;        /* keep flex centering for carousel */
+  display: flex;
   align-items: center;
   justify-content: center;
+  background-color: rgb(19, 13, 9); /* fallback */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 /* ===========================
@@ -97,6 +101,13 @@ body {
   justify-content: center;
   cursor: pointer;
   transition: transform 0.25s ease, background-color 0.2s ease, opacity 0.25s ease;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;   /* keeps aspect ratio, fills card */
+  border-radius: 10px; /* match card corners */
 }
 
 /* Active card emphasis */

@@ -25,13 +25,28 @@
       
       <!-- Carousel -->
       <div class="carousel-container">
-        <div class="carousel">
-          <div class="card">1</div>
-          <div class="card">2</div>
-          <div class="card">3</div>
-          <div class="card">4</div>
-          <div class="card">5</div>
-        </div>
+      <div class="carousel">
+            <div class="card" data-bg="images/bg1.jpg">
+              <img src="images/book1-cover.jpg" alt="Book 1"> <!--img src is ang book cover tas ang data bg is ang background overall -->
+            </div>
+
+            <div class="card" data-bg="images/bg2.jpg">
+              <img src="images/book2-cover.jpg" alt="Book 2">
+            </div>
+
+            <div class="card" data-bg="images/bg3.jpg">
+              <img src="images/book3-cover.jpg" alt="Book 3">
+            </div>
+
+            <div class="card" data-bg="images/bg4.jpg">
+              <img src="images/book4-cover.jpg" alt="Book 4">
+            </div>
+
+            <div class="card" data-bg="images/bg5.jpg">
+              <img src="images/book5-cover.jpg" alt="Book 5">
+            </div>
+      </div>
+
       </div>
 
       <!-- Secondary Navbar -->
@@ -51,6 +66,7 @@
 
   <!-- Scripts -->
   <script src="js/carousel.js"></script>
-  <script src="js/Book-navbar.js"></script>
+ 
+  <script src="js/Responsive.js"></script>
 </body>
 </html>
