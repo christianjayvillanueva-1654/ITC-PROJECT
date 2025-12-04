@@ -43,7 +43,7 @@ body {
 
 .navbar2 ul {
   display: flex;
-  justify-content: space-around;
+  gap: 0.25rem; /* tighten spacing between items */
   margin: 0;
   padding: 0;
   list-style: none;
