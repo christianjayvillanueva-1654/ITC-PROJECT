@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="css/Books.css">
   <link rel="stylesheet" href="css/navbar.css">
   <link rel="stylesheet" href="css/BooksPage2.css">
+  <link rel="stylesheet" href="css/Books-navbar.css">
 </head>
 <body>
   <!-- Main Navbar -->
@@ -34,12 +35,14 @@
       </div>
 
       <!-- Secondary Navbar -->
+       <?php $currentPage = basename($_SERVER['PHP_SELF']); ?>
+
       <div class="navbar2">
-        <ul>
-          <li class="active">Featured</li>
-          <li>More Tales</li>
-          <li>My List</li>
-        </ul>
+        <div class="nav2-links">
+           <a href="Books.php" class="<?php if($currentPage=='Books.php'){echo 'active';} ?>">Featured</a>
+            <a href="MoreTales.php" class="<?php if($currentPage=='MoreTales.php'){echo 'active';} ?>">More Tales</a>
+             <a href="MyList.php" class="<?php if($currentPage=='MyList.php'){echo 'active';} ?>">My List</a>
+        </div>
       </div>
 
     

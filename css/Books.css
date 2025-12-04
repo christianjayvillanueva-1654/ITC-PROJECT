@@ -37,7 +37,7 @@ body {
   margin-top: 10vh;
 }
 
-.navbar2 ul {
+.nav2-links {
   display: flex;
   justify-content: space-between; /* spread items evenly across full width */
   align-items: center;            /* vertical centering */
@@ -48,7 +48,7 @@ body {
   gap: 1rem;
 }
 
-.navbar2 li {
+.nav2-links a {
   flex: 1;                        /* each item takes equal width */
   text-align: center;             /* center text inside each slot */
   font-size: 1.2rem;
@@ -57,18 +57,6 @@ body {
   padding: 0.8rem;              /* vertical padding only */
   border-radius: 20px;
   transition: background-color 0.3s ease, color 0.3s ease;
-}
-/* Hover effect */
-.navbar2 li:hover {
-  background-color: rgba(0,0,0,0.05);
-}
-
-/* Active state */
-.navbar2 li.active {
-  background-color: #ffdd57;
-  color: #000;
-  border-radius: 2rem;
-  transition: all 0.3s ease; /* smooth highlight change */
 }
 
 /* ===========================
