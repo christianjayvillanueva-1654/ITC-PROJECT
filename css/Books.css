@@ -27,12 +27,10 @@ body {
 }
 
 .navbar2 {
-   position: sticky;
+  position: sticky;
   top: 75px;
   position: absolute;       /* position relative to about-page1 */
   top: 75px;               /* 200px below the top of about-page1 */
-  left: 50%;                /* start from horizontal center */
-  transform: translateX(-50%); /* shift back by half width to center */
   width: 500px;             /* fixed width */
   background: #fff;         /* visible background */
   border-radius: 2rem;       /* optional rounded corners */
@@ -43,10 +41,13 @@ body {
 
 .navbar2 ul {
   display: flex;
-  gap: 0.25rem; /* tighten spacing between items */
+  justify-content: center;   /* centers items horizontally */
+  align-items: center;       /* centers items vertically */
+  gap: 1rem;
   margin: 0;
   padding: 0;
   list-style: none;
+  height: 100%;              /* ensures flexbox has vertical space */
 }
 
 .navbar2 li {
@@ -70,6 +71,12 @@ body {
   border-radius: 2rem;          /* rounded pill shape */
 
 
+}
+.navbar2 li.active {
+  background-color: #ffdd57;
+  color: #000;
+  border-radius: 2rem;
+  transition: all 0.3s ease; /* smooth highlight change */
 }
 
 

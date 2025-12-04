@@ -27,11 +27,12 @@
       </div>
 
       <div class="navbar2">
-       <ul>
-        <li>Featured</li>
-        <li>More Tales</li>
-        <li>My List</li>
-      </ul>
+      <ul>
+  <li class="active">Featured</li>
+  <li>More Tales</li>
+  <li>My List</li>
+</ul>
+
     
      </div>
 
@@ -41,7 +42,7 @@
       <div class="ground"></div>
 
     </div>
-    <script src="js/navbar2.js"></script>
+    <script src="js/Book-navbar.js"></script>
 </body>
 
 
