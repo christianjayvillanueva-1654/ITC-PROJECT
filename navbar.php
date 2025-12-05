@@ -6,15 +6,23 @@ $currentPath = $_SERVER['PHP_SELF'];             // includes folder path
 <div class="navbar-background">
   <div class="Logo">PanayTale</div>
   <div class="nav-links">
-    <a href="HomePage.php" class="<?php if($currentPage=='HomePage.php'){echo 'active-page';} ?>">Home</a>
+    <!-- Home -->
+    <a href="<?php echo (strpos($currentPath, '/bookslink/') !== false) ? '../HomePage.php' : 'HomePage.php'; ?>" 
+       class="<?php if($currentPage=='HomePage.php'){echo 'active-page';} ?>">
+       Home
+    </a>
     
-    <a href="Books.php" class="<?php 
-      if($currentPage=='Books.php' || strpos($currentPath, '/bookLinks/') !== false){
-        echo 'active-page';
-      } 
-    ?>">Books</a>
+    <!-- Books -->
+    <a href="<?php echo (strpos($currentPath, '/bookslink/') !== false) ? '../Books.php' : 'Books.php'; ?>" 
+       class="<?php if($currentPage=='Books.php' || stripos($currentPath, '/bookslink/') !== false){echo 'active-page';} ?>">
+       Books
+    </a>
     
-    <a href="about.php" class="<?php if($currentPage=='about.php'){echo 'active-page';} ?>">About</a>
+    <!-- About -->
+    <a href="<?php echo (strpos($currentPath, '/bookslink/') !== false) ? '../about.php' : 'about.php'; ?>" 
+       class="<?php if($currentPage=='about.php'){echo 'active-page';} ?>">
+       About
+    </a>
     
     <div class="sign-in">Sign-in</div>
   </div>
