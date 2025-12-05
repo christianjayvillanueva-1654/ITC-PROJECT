@@ -10,7 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
 
   <!-- Stylesheets -->
-  <link rel="stylesheet" href="css/Books.css">
+  <link rel="stylesheet" href="css/Books.css"><link href="https://fonts.googleapis.com/css2?family=Intel+One+Mono:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/navbar.css">
   <link rel="stylesheet" href="css/BooksPage2.css">
   <link rel="stylesheet" href="css/Books-navbar.css">
