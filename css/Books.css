@@ -114,35 +114,45 @@ html, body {
   max-width: 340px;
   min-width: 140px;
   aspect-ratio: 8.5 / 11;
-  background: #000000;
+  background: #00000000;
   border-radius: 10px;
   text-align: center;
   font-size: 1.12rem;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;   /* stack children vertically */
+  align-items: center;      /* center horizontally */
+  justify-content: flex-start; /* start from top, not middle */
   transform-origin: center center;
   cursor: pointer;
   transition: transform 0.25s ease, background-color 0.2s ease, opacity 0.25s ease;
 }
 
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.card-title {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;   /* white text for contrast */
+}
 /* Fade side (non-active) cards */
 .carousel .card:not(.active) {
   opacity: 0.55;
   transform: scale(0.96);
 }
 
-.card img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 10px;
-}
+
+
+
 
 /* Active card emphasis */
 .card.active {
   transform: scale(1.2);
-  background-color: #ffdd57;
+  background-color: #ffdd5700;
   z-index: 5;
   opacity: 1;
 }
