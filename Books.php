@@ -25,28 +25,27 @@
       
       <!-- Carousel -->
       <div class="carousel-container">
-      <div class="carousel">
-            <div class="card" data-bg="images/bg1.jpg">
-              <img src="images/book1-cover.jpg" alt="Book 1"> <!--img src is ang book cover tas ang data bg is ang background overall -->
-            </div>
+        <div class="carousel">
+          <div class="card" data-bg="images/backgrounds/bg1.jpg" data-link="book1.html">
+            <img src="images/covers/book1.jpg" alt="Book 1">
+          </div>
 
-            <div class="card" data-bg="images/bg2.jpg">
-              <img src="images/book2-cover.jpg" alt="Book 2">
-            </div>
+          <div class="card" data-bg="images/backgrounds/bg2.jpg" data-link="book2.html">
+            <img src="images/covers/book2.jpg" alt="Book 2">
+          </div>
 
-            <div class="card" data-bg="images/bg3.jpg">
-              <img src="images/book3-cover.jpg" alt="Book 3">
-            </div>
+          <div class="card" data-bg="images/backgrounds/bg3.jpg" data-link="book3.html">
+            <img src="images/covers/book3.jpg" alt="Book 3">
+          </div>
 
-            <div class="card" data-bg="images/bg4.jpg">
-              <img src="images/book4-cover.jpg" alt="Book 4">
-            </div>
+          <div class="card" data-bg="images/backgrounds/bg4.jpg" data-link="book4.html">
+            <img src="images/covers/book4.jpg" alt="Book 4">
+          </div>
 
-            <div class="card" data-bg="images/bg5.jpg">
-              <img src="images/book5-cover.jpg" alt="Book 5">
-            </div>
-      </div>
-
+          <div class="card" data-bg="images/backgrounds/bg5.jpg" data-link="book5.html">
+            <img src="images/covers/book5.jpg" alt="Book 5">
+          </div>
+        </div>
       </div>
 
       <!-- Secondary Navbar -->
@@ -54,9 +53,9 @@
 
       <div class="navbar2">
         <div class="nav2-links">
-           <a href="Books.php" class="<?php if($currentPage=='Books.php'){echo 'active';} ?>">Featured</a>
-            <a href="MoreTales.php" class="<?php if($currentPage=='MoreTales.php'){echo 'active';} ?>">More Tales</a>
-             <a href="MyList.php" class="<?php if($currentPage=='MyList.php'){echo 'active';} ?>">My List</a>
+           <a href="Books.php" class="Featured">Featured</a>
+            <a href="MoreTales.php" class="More-Tales">More Tales</a>
+             <a href="MyList.php" class="My-List">My List</a>
         </div>
       </div>
 
@@ -68,5 +67,7 @@
   <script src="js/carousel.js"></script>
  
   <script src="js/Responsive.js"></script>
+
+  <script src="js/LinkOnClick.js"></script>
 </body>
 </html>
