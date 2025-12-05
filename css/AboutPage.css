@@ -1,4 +1,10 @@
 /* Overall page padding */
+
+body {
+    margin: 0;
+    padding: 0;
+
+}
 .about-wrapper {
     display: flex;
     width: 100%;

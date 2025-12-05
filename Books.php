@@ -24,29 +24,22 @@
     <div class="about-page1">
       
       <!-- Carousel -->
-      <div class="carousel-container">
-        <div class="carousel">
-          <div class="card" data-bg="books-asset/Hinilawod.png" data-link="book1.html">
-            <img src="books-asset/Hinilawod.png" alt="Book 1">
-          </div>
+      <?php include 'booksData.php'; ?>
 
-          <div class="card" data-bg="books-asset/Alunsina.jpg" data-link="book2.html">
-            <img src="books-asset/Alunsina.jpg" alt="Book 2">
-          </div>
-
-          <div class="card" data-bg="books-asset/Bakunawa.jpg" data-link="book3.html">
-            <img src="books-asset/Bakunawa.jpg" alt="Book 3">
-          </div>
-
-          <div class="card" data-bg="books-asset/Tikbalang.jpg" data-link="book4.html">
-            <img src="books-asset/Tikbalang.jpg" alt="Book 4">
-          </div>
-
-          <div class="card" data-bg="books-asset/Tumao.jpg" data-link="book5.html">
-            <img src="books-asset/Tumao.jpg" alt="Book 5">
-          </div>
-        </div>
+<div class="carousel-container">
+  <div class="carousel">
+    <?php foreach ($books as $book): ?>
+      <div class="card" 
+           data-bg="<?php echo $book['cover_image']; ?>" 
+           data-link="<?php echo $book['link']; ?>"
+           data-title="<?php echo $book['title']; ?>">
+        <img src="<?php echo $book['cover_image']; ?>" alt="<?php echo $book['title']; ?>">
+        <div class="card-title"><?php echo $book['title']; ?></div>
+        
       </div>
+    <?php endforeach; ?>
+  </div>
+</div>
 
       <!-- Secondary Navbar -->
        <?php $currentPage = basename($_SERVER['PHP_SELF']); ?>
