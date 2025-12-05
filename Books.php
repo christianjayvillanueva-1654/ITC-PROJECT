@@ -30,20 +30,20 @@
             <img src="books-asset/Hinilawod.png" alt="Book 1">
           </div>
 
-          <div class="card" data-bg="images/backgrounds/bg2.jpg" data-link="book2.html">
-            <img src="images/covers/book2.jpg" alt="Book 2">
+          <div class="card" data-bg="books-asset/Alunsina.jpg" data-link="book2.html">
+            <img src="books-asset/Alunsina.jpg" alt="Book 2">
           </div>
 
-          <div class="card" data-bg="images/backgrounds/bg3.jpg" data-link="book3.html">
-            <img src="images/covers/book3.jpg" alt="Book 3">
+          <div class="card" data-bg="books-asset/Bakunawa.jpg" data-link="book3.html">
+            <img src="books-asset/Bakunawa.jpg" alt="Book 3">
           </div>
 
-          <div class="card" data-bg="images/backgrounds/bg4.jpg" data-link="book4.html">
-            <img src="images/covers/book4.jpg" alt="Book 4">
+          <div class="card" data-bg="books-asset/Tikbalang.jpg" data-link="book4.html">
+            <img src="books-asset/Tikbalang.jpg" alt="Book 4">
           </div>
 
-          <div class="card" data-bg="images/backgrounds/bg5.jpg" data-link="book5.html">
-            <img src="images/covers/book5.jpg" alt="Book 5">
+          <div class="card" data-bg="books-asset/Tumao.jpg" data-link="book5.html">
+            <img src="books-asset/Tumao.jpg" alt="Book 5">
           </div>
         </div>
       </div>
