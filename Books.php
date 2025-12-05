@@ -26,8 +26,8 @@
       <!-- Carousel -->
       <div class="carousel-container">
         <div class="carousel">
-          <div class="card" data-bg="images/backgrounds/bg1.jpg" data-link="book1.html">
-            <img src="images/covers/book1.jpg" alt="Book 1">
+          <div class="card" data-bg="Hinilawod.png" data-link="book1.html">
+            <img src="Hinilawod.png" alt="Book 1">
           </div>
 
           <div class="card" data-bg="images/backgrounds/bg2.jpg" data-link="book2.html">
