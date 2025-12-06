@@ -53,6 +53,8 @@
         </div>
       </div>
 
+      <div class="bottom-bar"></div>
+
     
     </div>
   </div>

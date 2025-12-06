@@ -32,8 +32,8 @@ html, body {
   inset: 0; /* covers entire container */
   background: linear-gradient(
     to bottom,
-    rgba(19, 13, 9, 0) 0%,   /* transparent at top */
-    rgba(0, 0, 0, 0.8) 70%,  /* fade starts */
+    rgba(19, 13, 9, 0.2) 0%,   /* transparent at top */
+    rgba(0, 0, 0, 0.8) 40%,  /* fade starts */
     rgba(0, 0, 0, 1) 100%    /* solid black bottom */
   );
   pointer-events: none; /* don’t block clicks */
@@ -85,7 +85,7 @@ html, body {
 =========================== */
 .carousel-container {
   position: absolute; /* anchored to about-page1 */
-  bottom: 20vh;       /* 10vh from bottom */
+  bottom: 15vh;       /* 10vh from bottom */
   left: 50%;
   transform: translateX(-50%);
   width: 80vw;
@@ -93,10 +93,10 @@ html, body {
   overflow: hidden;
   display: flex;
   justify-content: center;
-  z-index: 2;
+  z-index: 3;
   padding: 3rem 0;
-
 }
+
 
 .carousel {
   display: flex;
@@ -124,6 +124,7 @@ html, body {
   justify-content: flex-start; /* start from top, not middle */
   transform-origin: center center;
   cursor: pointer;
+ 
   transition: transform 0.25s ease, background-color 0.2s ease, opacity 0.25s ease;
 }
 
@@ -131,6 +132,7 @@ html, body {
   width: 100%;
   height: auto;
   border-radius: 10px;
+   box-shadow: 0 6px 12px rgba(0,0,0,0.25);
 }
 
 .card-title {
@@ -141,10 +143,22 @@ html, body {
 }
 /* Fade side (non-active) cards */
 .carousel .card:not(.active) {
-  opacity: 0.55;
+  opacity: 1;
   transform: scale(0.96);
 }
 
+/* ===========================
+   Bottom White Bar adjust nyo lang background-color kung needed gdmani
+=========================== */
+.bottom-bar {
+  position: absolute;   /* stays inside about-page1 */
+  bottom: 0;            /* stick to bottom */
+  left: 0;
+  width: 100%;          /* full width */
+  height: 30vh;         /* 20% of viewport height */
+  background-color: #ffffff00;
+  z-index: 2;           /* above gradient, below nav if needed */
+}
 
 
 
