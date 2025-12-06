@@ -1,10 +1,59 @@
 body {
   background-color: oklch(97.356% 0.01586 58.432);
-  font-family: 'Intel One Mono', 'Clear Sans', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  width: 100%;
+  font-family: 'Inter', sans-serif;
   margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  overflow: hidden; /* disables both vertical and horizontal scroll */
-  height: 100%;     /* ensures content fits viewport */
-} 
+  overflow: hidden; /* no scrollbars */
+}
+
+.hero {
+  width: 100%;
+  height: calc(100vh - 60px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  transform: translateY(40px); /* pushes everything lower */
+}
+.panay {
+  font-weight: 700;
+  font-style: italic;
+  font-family: 'Inter', sans-serif;
+  font-variation-settings: "slnt" -10; /* forces italic slant even if the browser cheats */
+}
+
+.TALES {
+  font-weight: 1000;
+  font-family: 'Inter', sans-serif;
+
+  /* visually thicker without breaking the font */
+  text-shadow: 
+    1px 0 currentColor,
+    -1px 0 currentColor,
+    0 1px currentColor,
+    0 -1px currentColor;
+}
+
+
+.brand-title {
+  font-size: 4.2rem; /* slightly smaller */
+  font-weight: 700;
+  margin: 0;
+  line-height: 1;
+}
+
+.intro {
+  margin-top: 15px; /* smaller gap */
+  font-size: 1.1rem; /* slightly smaller */
+  max-width: 600px;
+  line-height: 1.5;
+  color: #4a3b2d;
+}
+
+.book-button img {
+  width: 140px; /* tiny bit smaller */
+  margin-top: 20px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
