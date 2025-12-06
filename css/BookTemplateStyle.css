@@ -6,4 +6,65 @@ body {
   box-sizing: border-box;
   overflow: hidden; /* disables both vertical and horizontal scroll */
   height: 100%;     /* ensures content fits viewport */
-} 
+}
+
+.book-hero {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+/* Gradient overlay */
+.gradient-layer {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top right,
+    rgba(0,0,0,0.9) 0%,   /* black bottom-left */
+    rgba(0,0,0,0.7) 50%,  /* extend black further */
+    rgba(0,0,0,0) 100%    /* transparent top-right */
+  );
+  z-index: 1;
+}
+
+/* Content layer */
+.content-layer {
+  position: relative;
+  z-index: 2;
+  display: flex;          
+  width: calc(100% - 10px); /* reserve 10px space on the right */
+  height: 100%;
+  color: white;
+  padding-left: 10px;      /* space on the left */
+  box-sizing: border-box;
+}
+
+/* About Book: 30% */
+.about-book {
+  flex: 0 0 30%;          
+  background: rgba(255, 255, 255, 0.712); /* just for visibility */
+}
+
+/* Book Content: 70%, white background, anchored right */
+.book-content {
+  flex: 0 0 70%;          
+  background: white;
+  color: black;
+  margin-left: auto;       /* pushes it to the far right */
+}
+
+/* Portrait mode: only show book-content */
+@media screen and (orientation: portrait) {
+  .about-book {
+    display: none;   /* hide about-book */
+  }
+  .book-content {
+    flex: 1;         /* take full width */
+    width: 100%;     /* stretch across */
+    margin-left: 0;  /* no auto margin needed */
+  }
+}
