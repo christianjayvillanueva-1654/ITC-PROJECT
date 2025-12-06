@@ -20,7 +20,12 @@
     <!-- Content layer split into two parts -->
     <div class="content-layer">
       <div class="about-book">
-        <!-- Responsive section -->
+        <div class="bookcover">
+          <div class="book-img-cover" style="background-image: url('../<?php echo $book['cover_image']; ?>');"></div>
+
+        </div>
+          
+        <div class="book-comments"></div>
       </div>
 
       <div class="book-content">
