@@ -14,19 +14,20 @@ html, body {
 /* ===========================
    Page Container
 =========================== */
-.about-page1 {
+.about-page1{
   position: relative;
   height: 100vh; /* full viewport height */
   background-color: rgb(19, 13, 9); /* fallback */
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: bottom center;
   margin: 0;
   padding: 0;
 }
 
 
 .about-page1::after {
+  
   content: "";
   position: absolute;
   inset: 0; /* covers entire container */

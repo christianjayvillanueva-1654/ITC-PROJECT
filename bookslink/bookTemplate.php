@@ -12,7 +12,7 @@
 
   <?php include '../navbar.php'; ?>
 
-  <div class="book-hero" style="background-image: url('../<?php echo $book['cover_image']; ?>');">
+  <div class="book-hero" style="--bg-image: url('../<?php echo $book['cover_image']; ?>');">
     
     <!-- Gradient overlay layer -->
     <div class="gradient-layer"></div>

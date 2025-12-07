@@ -1,6 +1,10 @@
 <?php 
+if (session_status() === PHP_SESSION_NONE) {
+  session_start();
+}
 $currentPage = basename($_SERVER['PHP_SELF']);   // just the file name
 $currentPath = $_SERVER['PHP_SELF'];             // includes folder path
+$isLoggedIn = isset($_SESSION['user_id']);      // Check if user is logged in
 ?>
 
 <div class="navbar-background">
@@ -24,10 +28,18 @@ $currentPath = $_SERVER['PHP_SELF'];             // includes folder path
        About
     </a>
 
-     <a href="<?php echo (strpos($currentPath, '/bookslink/') !== false) ? '../sign-in.php' : 'sign-in.php'; ?>" 
-       class="sign-in <?php if($currentPage=='sign-in.php'){echo 'active-page';} ?>">
-       Sign-in
-    </a>
+    <!-- Sign-in or Sign-out button -->
+    <?php if ($isLoggedIn): ?>
+      <a href="<?php echo (strpos($currentPath, '/bookslink/') !== false) ? '../logout.php' : 'logout.php'; ?>" 
+         class="sign-in">
+         Sign out
+      </a>
+    <?php else: ?>
+      <a href="<?php echo (strpos($currentPath, '/bookslink/') !== false) ? '../sign-in.php' : 'sign-in.php'; ?>" 
+         class="sign-in <?php if($currentPage=='sign-in.php'){echo 'active-page';} ?>">
+         Sign-in
+      </a>
+    <?php endif; ?>
 
   </div>
 </div>

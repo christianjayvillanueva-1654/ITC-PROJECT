@@ -1,3 +1,9 @@
+<?php
+if (session_status() === PHP_SESSION_NONE) {
+  session_start();
+}
+$isLoggedIn = isset($_SESSION['user_id']);
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,7 +33,7 @@
       <!-- Carousel -->
       <?php include 'booksData.php'; ?>
 
-<div class="carousel-container">
+<div class="carousel-container" data-logged-in="<?php echo $isLoggedIn ? 'true' : 'false'; ?>">
   <div class="carousel">
     <?php foreach ($books as $book): ?>
       <div class="card" 
