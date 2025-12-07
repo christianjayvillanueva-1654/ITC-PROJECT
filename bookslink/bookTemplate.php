@@ -30,6 +30,7 @@
 
       <div class="book-content">
         <!-- Fixed 50% viewport width section -->
+         <?php echo $content; ?>
       </div>
     </div>
 
