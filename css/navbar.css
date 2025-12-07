@@ -32,7 +32,8 @@
 }
 
 
-.sign-in {
+/* Sign-in button style */
+.nav-links a.sign-in {
   background-color: #ff6600;
   color: #fff;
   padding: 0.5rem 1rem;
@@ -40,6 +41,19 @@
   cursor: pointer;
   font-weight: bold;
   transition: background-color 0.3s ease;
+}
+
+/* Hover effect for sign-in */
+.nav-links a.sign-in:hover {
+  background-color: #dd3f00;
+  color: #fff; 
+}
+
+/* Active state for sign-in */
+.nav-links a.sign-in.active-page {
+  background-color: #dd3f00;
+  border: none; /* remove underline effect */
+  pointer-events: none;
 }
 
 /* Search form inside navbar */

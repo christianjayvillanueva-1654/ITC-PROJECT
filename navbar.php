@@ -23,7 +23,11 @@ $currentPath = $_SERVER['PHP_SELF'];             // includes folder path
        class="<?php if($currentPage=='about.php'){echo 'active-page';} ?>">
        About
     </a>
-    
-    <div class="sign-in">Sign-in</div>
+
+     <a href="<?php echo (strpos($currentPath, '/bookslink/') !== false) ? '../sign-in.php' : 'sign-in.php'; ?>" 
+       class="sign-in <?php if($currentPage=='sign-in.php'){echo 'active-page';} ?>">
+       Sign-in
+    </a>
+
   </div>
 </div>
