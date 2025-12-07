@@ -1,3 +1,7 @@
+html {
+ scroll-behavior: smooth;   
+}
+
 html, body {
    height: 1005;
    margin: 0;
@@ -67,6 +71,7 @@ html, body {
     justify-content: space-between;
     gap: 40px;
     flex-wrap: wrap;
+    align-items: center; 
 }
 
 .footer-section {
@@ -161,4 +166,9 @@ html, body {
     width: 120px;
     margin-bottom: 15px;
     display: block;
+ }
+
+ a.active {
+    color: #bb6213;
+    font-weight: bold;
  }

@@ -56,9 +56,9 @@
         <div class="footer-section links">
             <h2>Check us out</h2>
             <ul>
-                <li><a href="index.php">Home</a></li>
+                <li><a href="HomePage.php">Home</a></li>
                 <li><a href="About.php">About Us</a></li>
-                <li><a href="Services.php">Our Tales</a></li>
+                <li><a href="Books.php">Our Tales</a></li>
             </ul>
         </div>
 
