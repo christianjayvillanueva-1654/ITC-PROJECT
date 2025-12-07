@@ -2,7 +2,6 @@ body {
   background-color: oklch(97.356% 0.01586 58.432);
   width: 100%;
   margin: 0;
-  padding-top: 60px;
   box-sizing: border-box;
   overflow: hidden; /* disables both vertical and horizontal scroll */
   height: 100%;     /* ensures content fits viewport */
