@@ -20,7 +20,7 @@
     <!-- LEFT SIDE IMAGE -->
     <div class="left-section">
         <div class="left-image-container">
-        <img src="images/Tales2.jpg" alt="About us bg image">
+        <img src="images/img1.jpg" alt="About us bg image">
     </div>
 </div>
 
@@ -48,9 +48,9 @@
 
         <div class="footer-section about">
             <div class="logo">
-                <img src="images/logonobg.png" alt="PanayTales Logo">
+                <img src="images/logonobg.png" class="footer-logo" alt="PanayTales Logo">
             </div>
-            <p>Your gateway to unforgettable adventures and memorable Reading.</p>
+            <p>Your gateway to unforgettable adventures and memorable Reading.Our stories bring magic, wisdom, and wonder to readers of all ages. Explore legends that have been passed down through generations. Celebrate the culture and imagination that make Panay unforgettable."</p>
         </div>
 
         <div class="footer-section links">

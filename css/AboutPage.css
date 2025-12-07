@@ -148,6 +148,7 @@ html, body {
     border-radius: 20px;
     overflow: hidden;
     box-shadow: 10px 0 20px rgba(0, 0, 0, 0.3);
+    display: flex;
 }
 
 .left-image-container img {
@@ -156,3 +157,8 @@ html, body {
     object-fit: cover;
     display: block;
 }
+ .footer-logo {
+    width: 120px;
+    margin-bottom: 15px;
+    display: block;
+ }
