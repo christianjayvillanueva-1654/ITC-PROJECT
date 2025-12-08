@@ -34,9 +34,7 @@ main {
   align-items: flex-start;
 
   width: 40vw;
-  margin-left: 3.75rem;        /* 60px → 3.75rem */
-
-  gap: 5rem;                   /* main vertical spacing */
+  margin-left: 3.75rem;
   text-align: left;
 }
 
@@ -46,9 +44,9 @@ main {
   font-size: 2.4rem;
   font-weight: 700;
   color: #4e3b31;
-  margin: 0 0 2.2rem 0;         /* 35px → 2.2rem */
+  margin: 0 0 2.2rem 0;
   line-height: 1.3;
-  max-width: 38.75rem;          /* 620px → 38.75rem */
+  max-width: 38.75rem;
 }
 
 /* INTRO TEXT */
@@ -56,8 +54,8 @@ main {
   font-family: 'Intel One Mono', 'Clear Sans', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   font-size: 1.25rem;
   line-height: 1.6;
-  margin: 0 0 2.8rem 0;         /* 45px → 2.8rem */
-  max-width: 31.25rem;          /* 500px → 31.25rem */
+  margin: 0 0 2.8rem 0;
+  max-width: 31.25rem;
 }
 
 /* BUTTON */
@@ -65,15 +63,15 @@ main {
   display: inline-block;
   background-color: #5c3b27;
   color: rgb(255, 244, 236);
-  padding: 0.875rem 2rem;       /* 14px 32px → rem */
-  border-radius: 0.75rem;       /* 12px → 0.75rem */
+  padding: 0.875rem 2rem;
+  border-radius: 0.75rem;
   border: none;
   font-size: 1.25rem;
   font-weight: 600;
   cursor: pointer;
   text-decoration: none;
-  margin-top: 1.56rem;          /* 25px → 1.56rem */
-  transition: 0.2s ease;
+  margin-top: 1.56rem;
+  transition: 0.3s ease;
 }
 
 .read-btn:hover {
@@ -84,7 +82,7 @@ main {
 /* RIGHT SIDE CONTAINER */
 .right {
   position: absolute;
-  right: 6.25rem;               /* 100px → 6.25rem */
+  right: 6.25rem;
   top: 0;
   width: 50vw;
   height: 100vh;
@@ -97,7 +95,7 @@ main {
   position: absolute;
   left: 0;
   top: 0;
-  width: 20rem;                 /* 320px → 20rem */
+  width: 20rem;
   height: 100vh;
   background-color: rgb(255, 244, 236);
   z-index: 3;
@@ -107,9 +105,9 @@ main {
 /* SHADOW LAYER */
 .shadow-layer {
   position: absolute;
-  left: 20rem;                  /* 320px → 20rem */
+  left: 20rem;
   top: 0;
-  width: 5rem;                  /* 80px → 5rem */
+  width: 5rem;
   height: 100vh;
   background: linear-gradient(to right,
       rgba(0, 0, 0, 0.18),
@@ -128,9 +126,9 @@ main {
 /* BOOK IMAGE */
 .right img {
   position: absolute;
-  height: 46.875rem;            /* 750px → 46.875rem */
+  height: 46.875rem;
   top: 45%;
-  right: 6.25rem;               /* 100px → 6.25rem */
+  right: 6.25rem;
 
   transform: translateY(-40%) rotate(0deg);
   transform-origin: bottom left;
@@ -141,7 +139,12 @@ main {
   z-index: 2;
 }
 
-/* HOVER */
+/* BOOK HOVER */
 .right img:hover {
+  transform: translateY(-40%) rotate(19deg);
+}
+
+/* ✨ BUTTON HOVER ALSO TILTS BOOK — MAGIC ✨ */
+.elements:has(.read-btn:hover) .right img {
   transform: translateY(-40%) rotate(19deg);
 }
