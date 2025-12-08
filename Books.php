@@ -26,20 +26,21 @@
       <!-- Carousel -->
       <?php include 'booksData.php'; ?>
 
-        <div class="carousel-container">
-          <div class="carousel">
-            <?php foreach ($books as $book): ?>
-              <div class="card" 
-                  data-bg="<?php echo $book['cover_image']; ?>" 
-                  data-link="<?php echo $book['link']; ?>"
-                  data-title="<?php echo $book['title']; ?>">
-                <img src="<?php echo $book['cover_image']; ?>" alt="<?php echo $book['title']; ?>">
-                <div class="card-title"><?php echo $book['title']; ?></div>
-                
-              </div>
-            <?php endforeach; ?>
-          </div>
-        </div>
+        <?php include 'booksData.php'; ?>
+
+<div class="carousel-container">
+  <div class="carousel">
+    <?php foreach (array_slice($books, 0, 5) as $book): ?>
+      <div class="card" 
+           data-bg="<?php echo $book['cover_image']; ?>" 
+           data-link="<?php echo $book['link']; ?>" 
+           data-title="<?php echo $book['title']; ?>">
+        <img src="<?php echo $book['cover_image']; ?>" alt="<?php echo $book['title']; ?>">
+        <div class="card-title"><?php echo $book['title']; ?></div>
+      </div>
+    <?php endforeach; ?>
+  </div>
+</div>
 
       <!-- Secondary Navbar -->
        <?php $currentPage = basename($_SERVER['PHP_SELF']); ?>
