@@ -25,7 +25,11 @@
       </div>
 
        <a href="Books.php" class="book-button">
+<<<<<<< HEAD
           <img src="images/book.png" alt="Go to Books">
+=======
+          <img src="images/book-butt.png" alt="Go to Books">
+>>>>>>> a9911a233cea9bfcf29c0f11f4e9f9a7777d4588
       </a>
 
     
