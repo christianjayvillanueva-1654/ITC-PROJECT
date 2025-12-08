@@ -144,7 +144,7 @@ html, body {
 }
 /* Fade side (non-active) cards */
 .carousel .card:not(.active) {
-  opacity: 1;
+  opacity: 0.4;
   transform: scale(0.96);
 }
 
