@@ -4,7 +4,7 @@ $currentPath = $_SERVER['PHP_SELF'];             // includes folder path
 ?>
 
 <div class="navbar-background">
-  <div class="Logo">PanayTales</div>
+  <div class="Logo"><i>Panay</i><b>Tales</b></div>
   <div class="nav-links">
     <!-- Home -->
     <a href="<?php echo (strpos($currentPath, '/bookslink/') !== false) ? '../HomePage.php' : 'HomePage.php'; ?>" 
