@@ -17,6 +17,14 @@
   <?php include 'navbar.php'; ?>
 
   <main>
+
+    <div class="right-side">
+
+    <div class="searchBar">
+      <input type="text" placeholder="Search for tales">
+      <button type="submit">Search</button>
+    </div>
+
    <?php $currentPage = basename($_SERVER['PHP_SELF']); ?>
 
       <div class="navbar3">
@@ -26,6 +34,37 @@
              <a href="MyList.php" class="My-List">My List</a>
         </div>
       </div>
+
+      <div class="content">
+        <div class="genre">
+          <div class="legend">Mythology</div>
+          <div class="boook">
+            <div class="book">Book 1</div>
+            <div class="book">Book 2</div>
+            <div class="book">Book 3</div>
+          </div>
+        </div>
+
+        <div class="genre">
+          <div class="legend">Epic Tales</div>
+          <div class="boook">
+            <div class="book">Book A</div>
+            <div class="book">Book B</div>
+          </div>
+        </div>
+
+        <div class="genre">
+          <div class="legend">Legends</div>
+          <div class="boook">
+            <div class="book">Book X</div>
+            <div class="book">Book Y</div>
+            <div class="book">Book Z</div>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
   </main>
 
 </body>

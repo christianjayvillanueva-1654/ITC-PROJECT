@@ -1,3 +1,6 @@
+/* ===========================
+   Global Styles
+=========================== */
 html, body {
   font-family: 'Intel One Mono', 'Clear Sans', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   height: 100%;
@@ -5,21 +8,69 @@ html, body {
   padding: 0;
   background-color: rgb(255, 236, 224);
   box-sizing: border-box;
-  overflow: hidden; /* lock viewport, no scrollbars */
+  overflow: hidden; /* lock viewport, no global scroll */
 }
 
-.navbar3 {
+main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;   /* stack searchBar, navbar, content */
+  align-items: center;
+}
 
-  
-  position: absolute; /* anchored to about-page1 */
-  top: 10vh;          /* 20vh from top */
-  left: 50%;
-  transform: translateX(-50%);
+/* ===========================
+   Right Side Panel
+=========================== */
+.right-side {
+  position: fixed;
+  left: 0;
+  height: 100vh;
+  width: 60vw;
+  min-width: 700px;
+  background-color: #fff;
+}
+
+/* ===========================
+   Search Bar
+=========================== */
+.searchBar {
   width: 500px;
+  margin: 20px auto; /* centers horizontally */
   background: #fff;
   border-radius: 2rem;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  z-index: 3;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.089);
+  padding: 0.5rem 1rem;
+  display: flex;
+  gap: 0.5rem;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 0.5rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 1rem;
+  font-size: 1rem;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 1rem;
+  background-color: #dd3f00;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/* ===========================
+   Navbar
+=========================== */
+.navbar3 {
+  width: 500px;
+  margin: 20px auto; /* sits below search bar */
+  background: transparent;
+  border-radius: 2rem;
   padding: 0.5rem 1rem;
 }
 
@@ -43,4 +94,55 @@ html, body {
   padding: 0.8rem;
   border-radius: 20px;
   transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* ===========================
+   Content (scrollable panel)
+=========================== */
+.content {
+  width: 90%;
+  margin: 20px auto;              
+  background-color: #00000000;
+  height: calc(100vh - 200px);    /* subtract searchBar + navbar height */
+  overflow-y: auto;               /* enables vertical scrolling */
+  overflow-x: hidden;
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+/* ===========================
+   Genre Blocks
+=========================== */
+.genre {
+  display: flex;
+  flex-direction: column;   /* stack legend above books */
+  gap: 10px;
+  margin-bottom: 30px;
+  background: #f9f9f9;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.legend {
+  font-weight: bold;
+  font-size: 1.2rem;
+  background: #eee;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+.boook {
+  display: flex;
+  flex-wrap: wrap;          /* books flow into rows */
+  gap: 10px;
+}
+
+.book {
+  flex: 0 0 100px;          /* fixed width for each book */
+  height: 150px;
+  background: #ddd;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
