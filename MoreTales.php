@@ -35,33 +35,30 @@
         </div>
       </div>
 
-      <div class="content">
-        <div class="genre">
-          <div class="legend">Mythology</div>
-          <div class="boook">
-            <div class="book">Book 1</div>
-            <div class="book">Book 2</div>
-            <div class="book">Book 3</div>
-          </div>
-        </div>
+      <?php include 'booksData.php'; ?>
 
-        <div class="genre">
-          <div class="legend">Epic Tales</div>
-          <div class="boook">
-            <div class="book">Book A</div>
-            <div class="book">Book B</div>
+<div class="content">
+  <?php 
+    $genres = ["Legend", "Adventure", "Mystery"];
+    foreach ($genres as $genre): 
+      $filtered = array_filter($books, fn($book) => in_array($genre, $book['genres']));
+  ?>
+    <div class="genre">
+      <div class="legend"><?php echo $genre; ?></div>
+      <div class="boook">
+        <?php foreach ($filtered as $book): ?>
+          <div class="book">
+            <a href="<?php echo $book['link']; ?>">
+              <img src="<?php echo $book['cover_image']; ?>" alt="<?php echo $book['title']; ?>">
+              <div class="book-title"><?php echo $book['title']; ?></div>
+            </a>
           </div>
-        </div>
-
-        <div class="genre">
-          <div class="legend">Legends</div>
-          <div class="boook">
-            <div class="book">Book X</div>
-            <div class="book">Book Y</div>
-            <div class="book">Book Z</div>
-          </div>
-        </div>
+        <?php endforeach; ?>
       </div>
+    </div>
+  <?php endforeach; ?>
+</div>
+
 
 
     </div>
