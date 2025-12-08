@@ -1,0 +1,46 @@
+html, body {
+  font-family: 'Intel One Mono', 'Clear Sans', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(255, 236, 224);
+  box-sizing: border-box;
+  overflow: hidden; /* lock viewport, no scrollbars */
+}
+
+.navbar3 {
+
+  
+  position: absolute; /* anchored to about-page1 */
+  top: 10vh;          /* 20vh from top */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 500px;
+  background: #fff;
+  border-radius: 2rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  z-index: 3;
+  padding: 0.5rem 1rem;
+}
+
+.nav3-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  width: 100%;
+  gap: 1rem;
+}
+
+.nav3-links a {
+  flex: 1;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0.8rem;
+  border-radius: 20px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}

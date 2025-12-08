@@ -10,7 +10,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
 
   <!-- Stylesheets -->
-  <link rel="stylesheet" href="css/Books.css"><link href="https://fonts.googleapis.com/css2?family=Intel+One+Mono:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/Books.css">
+  <link href="https://fonts.googleapis.com/css2?family=Intel+One+Mono:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/navbar.css">
   <link rel="stylesheet" href="css/BooksPage2.css">
   <link rel="stylesheet" href="css/Books-navbar.css">
@@ -27,20 +28,20 @@
       <!-- Carousel -->
       <?php include 'booksData.php'; ?>
 
-<div class="carousel-container">
-  <div class="carousel">
-    <?php foreach ($books as $book): ?>
-      <div class="card" 
-           data-bg="<?php echo $book['cover_image']; ?>" 
-           data-link="<?php echo $book['link']; ?>"
-           data-title="<?php echo $book['title']; ?>">
-        <img src="<?php echo $book['cover_image']; ?>" alt="<?php echo $book['title']; ?>">
-        <div class="card-title"><?php echo $book['title']; ?></div>
-        
-      </div>
-    <?php endforeach; ?>
-  </div>
-</div>
+        <div class="carousel-container">
+          <div class="carousel">
+            <?php foreach ($books as $book): ?>
+              <div class="card" 
+                  data-bg="<?php echo $book['cover_image']; ?>" 
+                  data-link="<?php echo $book['link']; ?>"
+                  data-title="<?php echo $book['title']; ?>">
+                <img src="<?php echo $book['cover_image']; ?>" alt="<?php echo $book['title']; ?>">
+                <div class="card-title"><?php echo $book['title']; ?></div>
+                
+              </div>
+            <?php endforeach; ?>
+          </div>
+        </div>
 
       <!-- Secondary Navbar -->
        <?php $currentPage = basename($_SERVER['PHP_SELF']); ?>
