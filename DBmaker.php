@@ -6,7 +6,7 @@
 
 $host = 'localhost';
 $user = 'root';
-$pass = 'SQLPassword1813';
+$pass = '';
 $db   = 'panaytalesdb';
 $port = 3306; // Change to 3307 if your MySQL uses 3307
 
