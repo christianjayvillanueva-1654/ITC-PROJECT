@@ -8,31 +8,39 @@
   <link rel="stylesheet" href="css/navbar.css">
 </head>
 
-
 <body>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
   <?php include 'navbar.php'; ?>
 
   <main>
     <div class="elements">
+
       <div class="left">
-        <h1>PanayTales</h1>
-        <p>
-          Discover the rich tapestry of Panay's folklore through our curated collection of captivating tales. Dive into stories that have been passed down through generations, each one bringing to life the vibrant culture and traditions of Panay. Whether you're seeking adventure, wisdom, or a glimpse into the mystical, PanayTales has something for every reader. Start your journey today and explore the enchanting world of Panay's legends!
-        </p>
+  <div class="left-inner">
+    <h1 class="tagline">Preserving the legends of Panay, one tale at a time</h1>
 
-      </div>
+    <p>
+      Explore Panay’s rich folklore through captivating tales passed down for generations.
+      Discover stories filled with adventure, wisdom, and mystery—each one bringing Panay’s
+      vibrant culture to life. Start your journey into the island’s legends today.
+    </p>
+
+    <a href="Books.php" class="read-btn">Read now!</a>
+  </div>
+</div>
+
+
+      <!-- RIGHT SIDE -->
       <div class="right">
-        <img src="images/book-butt.png" alt="r">
-
+        <div class="foreground-mask"></div>
+        <div class="shadow-layer"></div>
+        <a href="Books.php">
+    <img src="images/book-butt.png" alt="r">
+</a>
       </div>
 
     </div>
-  
   </main>
- 
 
 </body>
-
-
 </html>
