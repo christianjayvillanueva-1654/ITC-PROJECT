@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link rel="stylesheet" href="css/MoreTales.css">
+  <link rel="stylesheet" href="css/MyList.css">
     <link rel="stylesheet" href="css/navbar.css">
-  <link rel="stylesheet" href="css/Books-navbar2.css">
+  <link rel="stylesheet" href="css/Books-navbar3.css">
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
 </head>
@@ -37,8 +37,8 @@
       <?php include 'booksData.php'; ?>
 
 <div class="content">
-  <?php 
-    $genres = ["Legend", "Adventure", "Mystery"];
+  <?php                      
+    $genres = ["Legend", "Adventure", "Mystery"]; //islan lang diri for the favorites
     foreach ($genres as $genre): 
       $filtered = array_filter($books, fn($book) => in_array($genre, $book['genres']));
   ?>
