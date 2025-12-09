@@ -186,6 +186,7 @@ main {
   background: #ffffff;
   box-shadow: 0px 0.8rem 1rem rgba(0, 0, 0, 0.144);
   padding: 20px;
+  padding-bottom: 3rem;
 }
 
 .legend {
@@ -205,22 +206,24 @@ main {
   display: flex;
   flex-wrap: wrap;
   gap: 3rem;
+  padding: 0 3 rem;
+
+
 }
 
 /* ===========================
    Book Cards
 =========================== */
 .book {
-  flex: 0 0 247px;
+  flex: 0 0 14rem;
   border-radius: 6px;
-  overflow: hidden;
   background: #fff;
   box-shadow: 0 2px 6px rgba(0,0,0,0.15);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   cursor: pointer;
 }
 
@@ -252,6 +255,7 @@ main {
   font-size: 0.9rem;
   text-align: center;
   color: #333;
+  text-decoration: none;
 }
 
 /* ===========================
