@@ -2,7 +2,7 @@
    Global Styles
 =========================== */
 html, body {
-  font-family: 'Intel One Mono', 'Clear Sans', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Inter', 'Clear Sans', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   height: 100%;
   margin: 0;
   padding: 0;
@@ -14,21 +14,22 @@ html, body {
 main {
   width: 100%;
   height: 100%;
-  display: flex;
-  flex-direction: column;   /* stack searchBar, navbar, content */
+  display: flex;  /* stack searchBar, navbar, content */
   align-items: center;
 }
 
 /* ===========================
    Right Side Panel
 =========================== */
-.right-side {
+.left-side {
   position: fixed;
   left: 0;
   height: 100vh;
   width: 40vw;
   min-width: 700px;
   background-color: #fff;
+  overflow: hidden;
+  z-index: 1;
 }
 
 /* ===========================
@@ -36,7 +37,7 @@ main {
 =========================== */
 .searchBar {
   width: 500px;
-  margin: 20px auto; /* centers horizontally */
+  margin: 20px auto;
   background: #fff;
   border-radius: 2rem;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.089);
@@ -45,7 +46,7 @@ main {
   gap: 0.5rem;
 }
 
-input[type="text"] {
+.searchBar input[type="text"] {
   flex: 1;
   padding: 0.5rem 1rem;
   border: 1px solid #ccc;
@@ -53,7 +54,7 @@ input[type="text"] {
   font-size: 1rem;
 }
 
-button {
+.searchBar button {
   padding: 0.5rem 1rem;
   border: none;
   border-radius: 1rem;
@@ -61,6 +62,11 @@ button {
   color: #fff;
   font-size: 1rem;
   cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.searchBar button:hover {
+  background-color: #b83200;
 }
 
 /* ===========================
@@ -68,7 +74,7 @@ button {
 =========================== */
 .navbar3 {
   width: 500px;
-  margin: 20px auto; /* sits below search bar */
+  margin: 20px auto;
   background: transparent;
   border-radius: 2rem;
   padding: 0.5rem 1rem;
@@ -78,10 +84,6 @@ button {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  width: 100%;
   gap: 1rem;
 }
 
@@ -97,20 +99,41 @@ button {
 }
 
 /* ===========================
-   Content (scrollable panel)
+   Content (Genres Section)
 =========================== */
-/* ===========================
-   Content Wrapper
-=========================== */
-.content {
+#genres-section.content {
   width: 90%;
   margin: 20px auto;
   background-color: transparent;
   height: calc(100vh - 200px);   /* subtract searchBar + navbar height */
-  overflow-y: auto;              /* enables vertical scrolling */
+  overflow-y: auto;
   overflow-x: hidden;
   border-radius: 8px;
   padding: 1rem;
+  transition: opacity 0.4s ease;
+}
+
+/* ===========================
+   Search Results Section
+=========================== */
+#search-results {
+  display: none; /* hidden until search */
+  width: 90%;
+  margin: 20px auto;
+  background-color: transparent;
+  min-height: 200px;
+  height: auto; /* expand with results */
+  overflow-y: auto;
+  overflow-x: hidden;
+  border-radius: 8px;
+  padding: 1rem;
+  transition: opacity 0.4s ease;
+}
+
+#search-results h2 {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
 }
 
 /* ===========================
@@ -118,20 +141,22 @@ button {
 =========================== */
 .genre {
   display: flex;
-  flex-direction: column;   /* stack legend above books */
+  flex-direction: column;
   gap: 10px;
   margin-bottom: 30px;
-  background: #f9f9f9;
-  border-radius: 8px;
+  background: #ffffff;
+  box-shadow: 0px 0.8rem 1rem rgba(0, 0, 0, 0.144);
   padding: 20px;
 }
 
 .legend {
   font-weight: bold;
   font-size: 1.2rem;
-  background: #eee;
+  background: #ffffff;
   padding: 10px;
   border-radius: 6px;
+  margin-bottom: 1rem;
+  border-bottom: #b83200;
 }
 
 /* ===========================
@@ -139,7 +164,7 @@ button {
 =========================== */
 .boook {
   display: flex;
-  flex-wrap: wrap;          /* books flow into rows */
+  flex-wrap: wrap;
   gap: 15px;
 }
 
@@ -147,10 +172,10 @@ button {
    Book Cards
 =========================== */
 .book {
-  flex: 0 0 120px;          /* fixed width for each book */
+  flex: 0 0 120px;
   height: 180px;
   border-radius: 6px;
-  overflow: hidden;         /* keeps image inside rounded corners */
+  overflow: hidden;
   background: #fff;
   box-shadow: 0 2px 6px rgba(0,0,0,0.15);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -171,7 +196,7 @@ button {
 .book img {
   width: 100%;
   height: 100%;
-  object-fit: cover;        /* scales/crops image to fit */
+  object-fit: cover;
   border-radius: 6px;
 }
 
@@ -183,4 +208,22 @@ button {
   font-size: 0.9rem;
   text-align: center;
   color: #333;
+}
+
+/* ===========================
+   Highlighted Search Matches
+=========================== */
+mark {
+  background-color: #ffeb3b;
+  padding: 0 2px;
+  border-radius: 2px;
+}
+
+
+ .right-side {
+  position: absolute;
+  left: min(40vw, 700px);
+  width: calc(100vw - min(40vw, 700px));
+  height: 100vh;
+  background-color: #ffeb3b;
 }

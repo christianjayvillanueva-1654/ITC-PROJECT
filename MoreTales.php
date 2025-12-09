@@ -16,15 +16,21 @@
   <?php include 'navbar.php'; ?>
       <?php include 'booksData.php'; ?>
 
+       <script>
+    const books = <?php echo json_encode(array_values($books)); ?>;
+  </script>
+
   <main>
 
-    <div class="right-side">
+    <div class="left-side">
 
     <div class="searchBar">
       
       <input type="text" placeholder="Search for tales">
       <button type="submit">Search</button>
     </div>
+
+    
 
    <?php $currentPage = basename($_SERVER['PHP_SELF']); ?>
 
@@ -36,9 +42,13 @@
         </div>
       </div>
 
+
+      <div class="searchContainer">
+      <div id="search-results"></div>
+
   
 
-<div class="content">
+<div id="genres-section" class="content">
   <?php 
     $genres = ["Legend", "Adventure", "Mystery"];
     foreach ($genres as $genre): 
@@ -60,10 +70,19 @@
   <?php endforeach; ?>
 </div>
 
+</div>
+
 
 
     </div>
+
+    <div class="right-side">
+          <img src="" alt="">
+    </div>
+    
   </main>
 
 </body>
+
+<script src="js/Search.js"></script>
 </html>
