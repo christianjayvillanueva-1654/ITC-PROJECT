@@ -14,12 +14,14 @@
 <body>
 
   <?php include 'navbar.php'; ?>
+      <?php include 'booksData.php'; ?>
 
   <main>
 
     <div class="right-side">
 
     <div class="searchBar">
+      
       <input type="text" placeholder="Search for tales">
       <button type="submit">Search</button>
     </div>
@@ -34,7 +36,7 @@
         </div>
       </div>
 
-      <?php include 'booksData.php'; ?>
+  
 
 <div class="content">
   <?php 
