@@ -14,15 +14,23 @@
 <body>
 
   <?php include 'navbar.php'; ?>
+      <?php include 'booksData.php'; ?>
+
+       <script>
+    const books = <?php echo json_encode(array_values($books)); ?>;
+  </script>
 
   <main>
 
-    <div class="right-side">
+    <div class="left-side">
 
     <div class="searchBar">
+      
       <input type="text" placeholder="Search for tales">
       <button type="submit">Search</button>
     </div>
+
+    
 
    <?php $currentPage = basename($_SERVER['PHP_SELF']); ?>
 
@@ -34,11 +42,15 @@
         </div>
       </div>
 
-      <?php include 'booksData.php'; ?>
 
-<div class="content">
-  <?php                      
-    $genres = ["Legend", "Adventure", "Mystery"]; //islan lang diri for the favorites
+      <div class="searchContainer">
+      <div id="search-results"></div>
+
+  
+
+<div id="genres-section" class="content">
+  <?php 
+    $genres = ["Legend", "Adventure", "Mystery"];
     foreach ($genres as $genre): 
       $filtered = array_filter($books, fn($book) => in_array($genre, $book['genres']));
   ?>
@@ -58,10 +70,15 @@
   <?php endforeach; ?>
 </div>
 
+</div>
+
 
 
     </div>
+    
   </main>
 
 </body>
+
+<script src="js/Search.js"></script>
 </html>

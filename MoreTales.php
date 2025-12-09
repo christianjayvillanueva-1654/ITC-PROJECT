@@ -75,10 +75,6 @@
 
 
     </div>
-
-    <div class="right-side">
-          <img src="" alt="">
-    </div>
     
   </main>
 
