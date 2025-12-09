@@ -211,8 +211,7 @@ main {
    Book Cards
 =========================== */
 .book {
-  flex: 0 0 120px;
-  height: 180px;
+  flex: 0 0 247px;
   border-radius: 6px;
   overflow: hidden;
   background: #fff;
