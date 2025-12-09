@@ -1,3 +1,9 @@
+<?php
+if (session_status() === PHP_SESSION_NONE) {
+  session_start();
+}
+$isLoggedIn = isset($_SESSION['user_id']);
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +12,9 @@
   <title>Books Page</title>
 
   <!-- Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Intel+One+Mono:wght@300;400;600;700&display=swap" rel="stylesheet">
 
   <!-- Stylesheets -->
   <link rel="stylesheet" href="css/Books.css">
@@ -20,15 +28,12 @@
 
   <div class="about-container">
 
-  
     <div class="about-page1">
-      
+
       <!-- Carousel -->
       <?php include 'booksData.php'; ?>
 
-        <?php include 'booksData.php'; ?>
-
-<div class="carousel-container">
+<div class="carousel-container" data-logged-in="<?php echo $isLoggedIn ? 'true' : 'false'; ?>">
   <div class="carousel">
     <?php foreach (array_slice($books, 0, 5) as $book): ?>
       <div class="card" 
@@ -55,15 +60,12 @@
 
       <div class="bottom-bar"></div>
 
-    
     </div>
   </div>
 
   <!-- Scripts -->
   <script src="js/carousel.js"></script>
- 
   <script src="js/Responsive.js"></script>
-
   <script src="js/LinkOnClick.js"></script>
 </body>
 </html>

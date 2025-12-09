@@ -2,7 +2,7 @@
    Global Styles
 =========================== */
 html, body {
-   font-family: 'Inter', sans-serif;
+  font-family: 'Intel One Mono', 'Clear Sans', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   height: 100%;
   margin: 0;
   padding: 0;
@@ -14,19 +14,20 @@ html, body {
 /* ===========================
    Page Container
 =========================== */
-.about-page1 {
+.about-page1{
   position: relative;
   height: 100vh; /* full viewport height */
   background-color: rgb(19, 13, 9); /* fallback */
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: bottom center;
   margin: 0;
   padding: 0;
 }
 
 
 .about-page1::after {
+  
   content: "";
   position: absolute;
   inset: 0; /* covers entire container */
@@ -88,6 +89,8 @@ html, body {
   bottom: 15vh;       /* 10vh from bottom */
   left: 50%;
   transform: translateX(-50%);
+  width: 80vw;
+  max-width: 1400px;
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -109,7 +112,7 @@ html, body {
 .card {
   flex: 0 0 auto;
   width: 16vw;
-  max-width: 15rem;
+  max-width: 340px;
   min-width: 140px;
   aspect-ratio: 8.5 / 11;
   background: #00000000;
@@ -124,11 +127,6 @@ html, body {
   cursor: pointer;
  
   transition: transform 0.25s ease, background-color 0.2s ease, opacity 0.25s ease;
-}
-
-.card:hover {
-  transform: scale(1.05);   
-  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
 }
 
 .card img {
@@ -146,22 +144,10 @@ html, body {
 }
 /* Fade side (non-active) cards */
 .carousel .card:not(.active) {
-  opacity: 0.5;
+  opacity: 1;
   transform: scale(0.96);
 }
 
-
-.card:hover {
-  transform: scale(1.0);
-  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
-  opacity: 1;
-  z-index: 10;
-}
-
-.carousel .card:not(.active):hover {
-  transform: scale(1.0);
-  opacity: 0.8;
-}
 /* ===========================
    Bottom White Bar adjust nyo lang background-color kung needed gdmani
 =========================== */
@@ -188,32 +174,20 @@ html, body {
 
 /* Fade helpers */
 .card.fade-out {
-  opacity: 0.5;
+  opacity: 0;
   transform: scale(0.85);
-  animation: fadeOutScale 0.3s forwards;
 }
 
 .card.fade-in {
   opacity: 0;
   transform: scale(0.85);
-  animation: zoomInScale 0.3s forwards;
+  animation: fadeInScale 0.3s forwards;
 }
 
-@keyframes zoomInScale {
-  from {
-    opacity: 0;
-    transform: scale(0.3);
-  }
+/* Animation */
+@keyframes fadeInScale {
   to {
-    opacity: 0.5;
-    transform: scale(0.95);
-  }
-}
-
-
-@keyframes fadeOutScale {
-  to {
-    opacity: 0;
-    transform: scale(0.3);
+    opacity: 1;
+    transform: scale(1);
   }
 }
