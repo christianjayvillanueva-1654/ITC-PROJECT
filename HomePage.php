@@ -3,36 +3,48 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Panay Tales</title>
+
   <link rel="stylesheet" href="css/Homepage.css">
   <link rel="stylesheet" href="css/navbar.css">
-</head>
 
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+</head>
 
 <body>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
   <?php include 'navbar.php'; ?>
 
   <main>
-  <div class="hero">
-  <div class="hero-content">
+    <div class="elements">
 
-      <div class="text-block">
-          <p class="intro">
-              Discover the rich tapestry of Panay’s folklore — a home for timeless legends,
-              mysterious tales, and cultural treasures waiting to be explored.
+      <!-- LEFT -->
+      <div class="left">
+        <div class="left-inner">
+          <h1 class="tagline">Preserving the legends of Panay, one tale at a time</h1>
+
+          <p>
+            Explore Panay’s rich folklore through captivating tales passed down for generations.
+            Discover stories filled with adventure, wisdom, and mystery—each one bringing Panay’s
+            vibrant culture to life. Start your journey into the island’s legends today.
           </p>
+
+          <a href="Books.php" class="read-btn">Read now!</a>
+        </div>
       </div>
 
-      <a href="Books.php" class="book-button">
-          <img src="images/book-button.png" alt="Go to Books">
-      </a>
+      <!-- RIGHT -->
+      <div class="right">
+        <div class="foreground-mask"></div>
+        <div class="shadow-layer"></div>
 
-  </div>
-</div>
+        <a href="Books.php">
+          <img src="images/book-butt.png" alt="Book Button">
+        </a>
+      </div>
 
+    </div>
   </main>
+
 </body>
-
-
 </html>
