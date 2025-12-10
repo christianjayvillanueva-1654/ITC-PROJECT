@@ -47,7 +47,12 @@ INSERT INTO `books` (`books_id`, `title`, `link`, `cover_image`) VALUES
 (2, 'Alunsina', 'bookslink/book2.php', 'books-asset/Alunsina.jpg'),
 (3, 'Bakunawa', 'bookslink/book3.php', 'books-asset/Bakunawa.jpg'),
 (4, 'Tikbalang', 'bookslink/book4.php', 'books-asset/Tikbalang.jpg'),
-(5, 'Tumao', 'bookslink/book5.php', 'books-asset/Tumao.jpg')
+(5, 'Tumao', 'bookslink/book5.php', 'books-asset/Tumao.jpg'),
+(6, 'Bulalakaw', 'bookslink/book6.php', 'books-asset/Bulalakaw.jpg'),
+(7, 'Gimo', 'bookslink/book7.php', 'books-asset/Gimo.jpg'),
+(8, 'Mansion', 'bookslink/book8.php', 'books-asset/Mansion.jpg'),
+(9, 'Maragtas', 'bookslink/book9.php', 'books-asset/Maragtas.jpg'),
+(10, 'Polobulac', 'bookslink/book10.php', 'books-asset/Polobulac.jpg')
 ON DUPLICATE KEY UPDATE title = VALUES(title), link = VALUES(link), cover_image = VALUES(cover_image);
 
 -- Optional: create a test user (uncomment and run separately if you want)
